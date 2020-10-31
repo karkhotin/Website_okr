@@ -1,0 +1,27 @@
+	*{background: #F2E685;}
+	#wall{
+	width:95%;
+	padding: 20px;
+	}
+	.content{
+	padding-top: 10px;
+	margin-right: 5%;
+	margin-left: 5%;
+	}
+	 h1, img{
+		padding: 3%;
+	}
+	p{
+		font-size: 18pt;
+		font-style: oblique;
+		line-height: 1.5;
+		color: #7D4427;
+		text-align: justify;
+	}
+	a{
+	text-decoration: none;
+	font-size: 18pt; /* Размер шрифта */
+    font-weight: bold; 
+	color: #5A5F37;
+	}
+	a:hover {color:green;}
