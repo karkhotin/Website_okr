@@ -1,7 +1,6 @@
 	*{background: #F2E685;}
 	#wall{
-	width:95%;
-	padding: 20px;
+	padding: 50px;
 	}
 	.content{
 	padding-top: 10px;
@@ -10,6 +9,81 @@
 	}
 	 h1, img{
 		padding: 3%;
+	}
+	h2{
+		padding: 14px;
+		color: #7D4427;
+		border-style: dotted;
+		border-color: #FFD64D;
+		border-width: 8px;
+	}
+	.list{
+		list-style-image: url("ic_l.png");
+	}
+	.list li{
+		font-size: 20pt;
+		padding-bottom: 12px;
+		padding-left: 3px;
+		color: #7D4427;
+	}
+	table#tab{
+		border: 10px double white;
+		border-spacing: 5px;
+		border-collapse: collapse;
+	}
+	table#tab th{
+		background-color: white;
+		font-size:16pt;
+		color: #7D4427;
+	}
+	table#tab td{
+		border: 1px solid white;
+		text-align: center; 
+		width: 250px;
+		font-size: 10pt;
+		font-style: oblique;
+		
+	}
+	table {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	border-radius: 20px;
+	border-spacing: 0;
+	text-align: center;
+	}
+	th {
+	background: #7D4427;;
+	color: white;
+	text-shadow: 0 1px 1px #2D2020;
+	padding: 10px 20px;
+	}
+	th, td {
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+	border-color: white;
+	}
+	th:first-child, td:first-child {
+	text-align: left;
+	}
+	th:first-child {
+	border-top-left-radius: 10px;
+	}
+	th:last-child {
+	border-top-right-radius: 10px;
+	border-right: none;
+	}
+	td {
+	padding: 10px 20px;
+	background: #F8E391;
+	}
+	tr:last-child td:first-child {
+	border-radius: 0 0 0 10px;
+	}
+	tr:last-child td:last-child {
+	border-radius: 0 0 10px 0;
+	}
+	tr td:last-child {
+	border-right: none;
 	}
 	p{
 		font-size: 18pt;
