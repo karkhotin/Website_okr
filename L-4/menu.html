@@ -12,26 +12,31 @@ EN" "http://www.w3.org/TR/html4/loose.dtd">
 	background: #F0DB3C;
 	position: relative;
 	}
-	ul.menu li {
+	.menu li {
 		display:inline-block;
 		padding-bottom: 10px;
 		padding-top: 20px;
-		padding-right: 170px;
+		padding-right: 17px;
+		line-height:1.1;
 	}
 	a{
 	text-decoration: none;
 	font-size: 22px; /* Размер шрифта */
     font-weight: bold; 
+	line-height:1.8;
 	}
+	a:link, a:visited{color:black;}
+	a:active{ text-decoration: underline;}
+	a:hover {color:green;border: 6px dotted #6E6702;}
 	</style>
+	
 </head>
 
-<body link = "808000" alink = "877994"  vlink = "black" >
+<body >
 	<div id = "nav" >
 	<ul class="menu">
-		<li><a href="index.html" >Головна сторінка</a></li>
+		<li><a id= "a1" href="index.html" >Головна сторінка</a></li>
 		<li><a href="p2.html"  >Популярні напрямки</a></li>
-		<br>
 		<li><a href="p3.html"  >Види мандрівок</a></li>
 		<li><a href="p4.html"  >Як підготуватися до походу</a></li>
 	</ul>

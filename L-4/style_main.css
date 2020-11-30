@@ -1,14 +1,29 @@
 	*{background: #F2E685;}
 	#wall{
-	padding: 50px;
-	}
-	.content{
 	padding-top: 10px;
-	margin-right: 5%;
-	margin-left: 5%;
+	margin-right: 2%;
+	margin-left: 2%;
 	}
+	b+i{color: #B51D0A;}
+	p b{
+		color: #AF4425;
+	}
+	.content #p {
+		text-align: right;	
+	}
+	.content #p1 {
+		text-align: left;
+	}
+	.content #en{text-decoration: underline;}
+	.content>img{
+		border-radius: 50%;
+		float: left;
+	}
+	.content>img:hover{
+		transform: scaleX(-1);
+		}
 	 h1, img{
-		padding: 3%;
+		padding: 1.2%;
 	}
 	h2{
 		padding: 14px;
@@ -27,7 +42,7 @@
 		color: #7D4427;
 	}
 	table#tab{
-		border: 10px double white;
+		border: 10px groove white;
 		border-spacing: 5px;
 		border-collapse: collapse;
 	}
@@ -37,7 +52,7 @@
 		color: #7D4427;
 	}
 	table#tab td{
-		border: 1px solid white;
+		border: 3px  dashed white;
 		text-align: center; 
 		width: 250px;
 		font-size: 10pt;

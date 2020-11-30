@@ -7,13 +7,76 @@ EN" "http://www.w3.org/TR/html4/loose.dtd">
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<link  rel = "stylesheet" type = "text/css" href = "style_main.css">
+	<script src="dialogue.js"> </script>
 	<style>
-	#content{
-		color: #506D2F;
-		font-size: 18pt;
+	#Ob {
+		color: #6E6702;
+		font-family: Georgia;
+		font-size: 80px;
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		transform:skew(20deg);
 	}
+	#and {
+		background: transparent;
+		z-index: 15;
+		color: #C05805;
+		font-family: Times New Roman;
+		font-size: 64px;
+		font-style: italic;
+		letter-spacing: 20px;
+		position: absolute;
+		top: 36px;
+		left: 280px;
+		text-shadow: 3px 3px 1px #000000;
+	}
+	#trip {
+		background: transparent;
+		color: #6E6702;
+		font-family: Georgia;
+		font-size: 80px;
+		position: absolute;
+		top: 50px;
+		left: 490px;
+		z-index:10;
+		transform:skew(20deg);
+	}	
 	h2{ color: #7B7E15 !important;}
 	a{text-decoration: underline;}
+	.content{
+		font-size: 18pt;
+		padding-top:200px;
+	}
+	.Vol{margin-top:150px;}
+	.Vol:hover #p2_1, .Car:hover #p2_1 {
+		display: block;
+	}
+	#p2_1 {
+		display: none;
+		background-color: #FEF2E4;
+		padding: 20px;
+	}
+	span{
+		border: 3px solid white;
+		background-color:#FEF2E4;
+	}
+	p:first-letter {
+		color: fuchsia;
+		font-size: 36pt;
+	}
+    p:first-line {
+		font-variant: small-caps;
+	}
+	b:first-child {
+		background-color: #FEF2E4;
+		text-decoration: underline;
+	}
+	h2:after{content: "◂ ○ ◄ ";}
+	h2:before{content:" ► ○ ▸";}
+	
+	
+	
 	</style>
 </head>
 <body>
@@ -30,13 +93,24 @@ EN" "http://www.w3.org/TR/html4/loose.dtd">
 		<li><a href="p4.html">Як підготуватися до походу</a></li>
 	</ul>
   </nav> -->
+ 
+<div id="Ob">Обирай</div><div id="and">рушай</div><div id="trip">мандруй</div>
 <div id ="content">
-  <p><img src = "p2_1.jpg" weight = "350" height="170" align = "right"><h2 style = "color: fuchsia;">Волинь і Шацькі озера</h2> <br> Досвідчені мандрівники називають <i>Шацькі озера</i> "Ялтою для бідних", але в цілому це дуже цікаві місця, де є на що подивитися. Як, втім, і в цілому на Волині. Машина дозволить побачити все за пару днів і насолоджуватися повноцінним відпочинком на природі, рівну якій по красі в Україні важко знайти.
-  Детальніше читайте на  <a href = "https://www.unian.ua/tourism/wheretogo/10947032-7-nebanalnih-marshrutiv-dlya-podorozhi-po-ukrajini-na-mashini.html">УНІАН</a>
-	</p><br>
-	<p><img src = "p2_2.jpg" weight = "380" height="170" align = "left"><h2>Карпати</h2></h2> <br> Українська частина Карпат – місця таємничі, самобутні, сповнені духом природи та гір. Тут заховані прадавні таємниці гордої природи і розгадати їх можна лише тоді, коли здійснюєш сходження на вершини, пробираєшся глибокими печерами, долаєш втому та стихію, пливеш на човні за стрімкою течією, мандруєш смерековим лісом та поїдаєш смачні чорниці.
-    Якщо досконалість існує, то Карпати – її віддзеркалення. Карпати – масштабні та багатогранні. Однієї відпустки точно не вистачить, щоб познайомитися з ними. Але після того, як побував уперше – постійно хочеться повертатися знову і знову. Тут почуваєшся наче удома. Оберіть для себе цікавий та посильний маршрут, дізнайтеся про природні об'єкти, які можна відвідати дорогою, складіть перелік необхідних речей.Саме <a href ="p4.html#advice">момент підготовки </a> допоможе вам здійснити подорож мрії незважаючи на те, скільки днів ви проведете у горах.
+<div class ="Vol">
+	<p id="p2_1" >Обирай свій напрямок!</p>
+	<img src = "p2_1.jpg" weight = "350" height="170" align = "right"><h2 id = "h" style = "color: fuchsia;">Волинь і Шацькі озера</h2> 
+   <p >Досвідчені мандрівники називають <i>Шацькі озера</i> "Ялтою для бідних", але в цілому це дуже цікаві місця, де є на що подивитися. Як, втім, і в цілому на Волині. Машина дозволить побачити все за пару днів і насолоджуватися повноцінним відпочинком на природі, рівну якій по красі 
+   <span>в Україні важко знайти.</span>
+   Детальніше читайте на  <a href = "https://www.unian.ua/tourism/wheretogo/10947032-7-nebanalnih-marshrutiv-dlya-podorozhi-po-ukrajini-na-mashini.html">УНІАН</a>
+	</p></div><br><br>
+<div class="Car">
+	<p id="p2_1">Обирай свій напрямок!</p>
+	<img src = "p2_1.jpg" weight = "380" height="170" align = "left"><h2>Карпати</h2>
+	<p> Українська частина <b>Карпат</b> – місця таємничі, самобутні, сповнені духом природи та гір. Тут заховані прадавні таємниці гордої природи і розгадати їх можна лише тоді, коли здійснюєш сходження на вершини, пробираєшся глибокими печерами, долаєш втому та стихію, пливеш на човні за стрімкою течією, мандруєш смерековим лісом та поїдаєш смачні чорниці.
+    Якщо досконалість існує, то <b>Карпати</b> – її віддзеркалення. 
+	<span>Карпати – масштабні та багатогранні.</span> Однієї відпустки точно не вистачить, щоб познайомитися з ними. Але після того, як побував уперше – постійно хочеться повертатися знову і знову. Тут почуваєшся наче удома. Оберіть для себе цікавий та посильний маршрут, дізнайтеся про природні об'єкти, які можна відвідати дорогою, складіть перелік необхідних речей.Саме <a href ="p4.html#advice">момент підготовки </a> допоможе вам здійснити подорож мрії незважаючи на те, скільки днів ви проведете у горах.
 	</p>
+	</div>
 </div>
 	<!-- <footer class="footer">
 		<font>2020</font>
