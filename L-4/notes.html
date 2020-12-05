@@ -1,0 +1,92 @@
+<html>
+<head>
+	<title> Сторінка 4</title>
+	<meta name = "author" content = "Хотінь Карина"> 
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link  rel = "stylesheet" type = "text/css" href = "style_main.css">
+	<style>
+	ul{
+		list-style-image: url("ic_l.png");
+	}
+	ul li{
+		font-size: 20pt;
+		padding-bottom: 12px;
+		padding-left: 3px;
+		color: #7D4427;
+	}
+	li:last-child{text-decoration: underline;}
+	b{
+		color: #AF4425;
+		font-size: 24pt;
+	}
+	</style>
+	
+</head>
+
+<body >
+<div id= "wall">
+  <div id="content">
+  <script>
+  document.write('<b>Створи свій список речей у дорогу!</b>');
+</script>
+  <div id = "visual">
+	<p> <b>Слід взяти:</b>
+	<ul>
+	<li> дві футболки</li>
+	<li> дві пари штанів</li>
+	<li> дві кофти</li>
+	<li> термобілизну</li>
+	</ul> </p>
+	</div>
+	<div id = "add">
+	<p>Внесіть необхідні речі до списку, щоб не забути, що потрібо взяти з собою в мандрівку</p>
+	<input type="text" id="myText" value="">
+	<button type="button" onclick="addToList()"> Додати до списку</button>
+	<button type="button" onclick="deleteT()">Видалити</button>
+	<button type="button" onclick="replaceT()">Змінити</button>
+	</div>
+</div>
+<script>
+	let div = document.createElement('div');
+	document.body.append(div);
+	let b = document.createElement('b');
+	b.innerHTML = "<br><hr size = '3' color = '808000'>";
+	div.prepend(b);
+	let notes = document.createElement('b');
+	notes.innerHTML = "<b style = 'font-size: 20pt'>Примітка: </b>"
+	div.append(notes);
+	let t =  document.createElement('p');
+	t.textContent = "Ти можеш додавати нові позиції у список, видаляти їх та змінювати ";
+	div.after(t);
+	alert(t.outerHTML);
+</script>
+<script>
+	function addToList(){
+	let text = document.getElementById('myText').value;
+	const list = document.querySelector('ul');
+	// Создать новый элемент списка
+	const newItem = document.createElement('li');
+	newItem.textContent = text;
+	list.appendChild(newItem);
+	}
+</script>
+<script>
+	function deleteT(){
+	let del = document.querySelector('li:last-child');
+	del.remove();
+	}
+</script>
+<script>
+function replaceT(){
+	let replaceText = document.getElementById('myText').value;
+	let lastLi = document.querySelector('li:last-child');
+	const newT = document.createElement('li');
+	newT.textContent = replaceText;
+	lastLi.replaceWith(newT);
+	}
+</script
+
+</div>
+</body>
+</html>

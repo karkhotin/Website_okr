@@ -8,39 +8,48 @@ EN" "http://www.w3.org/TR/html4/loose.dtd">
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
 	<style>
+	body{	background: #F0DB3C;}
 	#nav{
-	background: #F0DB3C;
 	position: relative;
 	}
 	.menu li {
 		display:inline-block;
 		padding-bottom: 10px;
-		padding-top: 20px;
+		padding-top: 10px;
 		padding-right: 17px;
 		line-height:1.1;
 	}
 	a{
 	text-decoration: none;
-	font-size: 22px; /* Размер шрифта */
+	font-size: 20px; /* Размер шрифта */
     font-weight: bold; 
-	line-height:1.8;
+	line-height:1.4;
 	}
 	a:link, a:visited{color:black;}
 	a:active{ text-decoration: underline;}
 	a:hover {color:green;border: 6px dotted #6E6702;}
 	</style>
-	
+
 </head>
 
 <body >
+
 	<div id = "nav" >
 	<ul class="menu">
 		<li><a id= "a1" href="index.html" >Головна сторінка</a></li>
 		<li><a href="p2.html"  >Популярні напрямки</a></li>
 		<li><a href="p3.html"  >Види мандрівок</a></li>
 		<li><a href="p4.html"  >Як підготуватися до походу</a></li>
+		<li><a href="booking.html" >Пошук помешкання</a></li>
+		<li><a href="notes.html" >Нотатки</a></li>
 	</ul>
 	<iframe src="more.html" width="285" height="200"></iframe>
   </div>
+  	<script>
+	function changeBgr() {
+   document.body.style.background = "white";
+   setTimeout(() => document.body.style.background = "", 30000);}
+   	window.changeBgr();
+	</script>
 </body>
 </html>
