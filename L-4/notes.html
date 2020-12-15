@@ -20,6 +20,18 @@
 		color: #AF4425;
 		font-size: 24pt;
 	}
+	 .selected {
+      background: #C9A66B;
+    }
+
+    li {
+      cursor: pointer;
+    }
+	#img{
+		position:absolute;
+		top: 0px;
+		left: 540px;
+	}
 	</style>
 	
 </head>
@@ -30,9 +42,10 @@
   <script>
   document.write('<b>Створи свій список речей у дорогу!</b>');
 </script>
+<img src ="trip.ico" id ="img">
   <div id = "visual">
 	<p> <b>Слід взяти:</b>
-	<ul>
+	<ul id="ul">
 	<li> дві футболки</li>
 	<li> дві пари штанів</li>
 	<li> дві кофти</li>
@@ -42,11 +55,68 @@
 	<div id = "add">
 	<p>Внесіть необхідні речі до списку, щоб не забути, що потрібо взяти з собою в мандрівку</p>
 	<input type="text" id="myText" value="">
-	<button type="button" onclick="addToList()"> Додати до списку</button>
-	<button type="button" onclick="deleteT()">Видалити</button>
-	<button type="button" onclick="replaceT()">Змінити</button>
+	<button type="button" id="btn" onclick="addToList()"> Додати до списку</button>
+	<button type="button" id="btn" onclick="deleteT()">Видалити</button>
+	<button type="button" id="btn" onclick="replaceT()">Змінити</button>
 	</div>
 </div>
+
+<script>
+    ul.onmousedown = function(event) {
+      if (event.target.tagName != "LI") return;
+
+      if (event.which ==1) {
+        toggleSelect(event.target);
+      } else {
+        singleSelect(event.target);
+      }
+    }
+	function toggleSelect(li) {
+      li.classList.toggle('selected');
+    }
+   function singleSelect(li) {
+      let selected = ul.querySelectorAll('.selected');
+      for(let elem of selected) {
+        elem.classList.remove('selected');
+      }
+      li.classList.add('selected');
+    } 
+	
+	let img = document.getElementById("img");
+	img.addEventListener("mouseover", bigImg);
+	img.addEventListener("mouseout", normalImg);
+	img.addEventListener("mouseover",textImg);
+	
+function bigImg() {
+  img.style.height = "96px";
+  img.style.width = "96px";
+}
+
+function normalImg() {
+  img.style.height = "48px";
+  img.style.width = "48px";
+}
+function textImg(){
+	alert("Це зображення");
+}
+class Menu {
+	handleEvent(event) {
+		switch(event.type) {
+			case 'focus':
+				alert(event.type + " на " + event.currentTarget);
+				document.getElementById("myText").style.background = "fuchsia";
+			break;
+			case 'click':
+				document.getElementById("img").removeEventListener("mouseover", bigImg);
+			break;
+			}
+		}
+	}
+let menu = new Menu();
+myText.addEventListener('click', menu);
+myText.addEventListener('focus', menu);
+</script>
+
 <script>
 	let div = document.createElement('div');
 	document.body.append(div);
@@ -62,22 +132,19 @@
 	alert(t.outerHTML);
 </script>
 <script>
-	function addToList(){
+function addToList(){
 	let text = document.getElementById('myText').value;
 	const list = document.querySelector('ul');
-	// Создать новый элемент списка
 	const newItem = document.createElement('li');
 	newItem.textContent = text;
 	list.appendChild(newItem);
 	}
-</script>
-<script>
-	function deleteT(){
+
+function deleteT(){
 	let del = document.querySelector('li:last-child');
 	del.remove();
 	}
-</script>
-<script>
+
 function replaceT(){
 	let replaceText = document.getElementById('myText').value;
 	let lastLi = document.querySelector('li:last-child');
